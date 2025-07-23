@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yawer Graphic - Professional Graphic Design Portfolio</title>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              indigo: {
+                100: '#f0f0f0',
+                200: '#e0e0e0',
+                300: '#d0d0d0',
+                400: '#b0b0b0',
+                500: '#000000',
+                600: '#000000',
+                700: '#000000',
+                800: '#000000',
+                900: '#000000',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for animations and effects */
+        .logo-img {
+            height: 2.5rem;
+        }
+        @media (max-width: 768px) {
+            .logo-img {
+                height: 2rem;
+            }
+        }
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #000000 0%, #333333 100%);
+        }
+        
+        .portfolio-item {
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #667eea;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-100">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+              <img src="LOGO01.png" width="80">
+
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-black">Home</a>
+                    <a href="#services" class="nav-link text-gray-700 hover:text-black">Services</a>
+                    <a href="#portfolio" class="nav-link text-gray-700 hover:text-black">Portfolio</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-black">About</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-black">Contact</a>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <a href="#home" class="block py-2 text-gray-700 hover:text-indigo-600">Home</a>
+                <a href="#services" class="block py-2 text-gray-700 hover:text-indigo-600">Services</a>
+                <a href="#portfolio" class="block py-2 text-gray-700 hover:text-indigo-600">Portfolio</a>
+                <a href="#about" class="block py-2 text-gray-700 hover:text-indigo-600">About</a>
+                <a href="#contact" class="block py-2 text-gray-700 hover:text-indigo-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient pt-32 pb-20 md:pt-40 md:pb-32 px-6 text-white">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Creative Designs That Speak Volumes</h1>
+                <p class="text-xl mb-8">Transforming ideas into visually stunning designs that captivate and communicate your brand's essence.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#portfolio" class="bg-white text-black px-8 py-3 rounded-full font-semibold text-center hover:bg-gray-100 transition duration-300">View Portfolio</a>
+                    <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold text-center hover:bg-white hover:text-black transition duration-300">Get a Quote</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Design Illustration" class="w-full max-w-md floating">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Services</h2>
+                <div class="w-20 h-1 bg-black mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                    <div class="text-black mb-4">
+                        <i class="fas fa-pen-nib text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Logo Design</h3>
+                    <p class="text-gray-600">Unique, memorable logos that perfectly represent your brand identity and values.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                    <div class="text-black mb-4">
+                        <i class="fas fa-palette text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Brand Identity</h3>
+                    <p class="text-gray-600">Comprehensive brand packages including color schemes, typography, and visual guidelines.</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                    <div class="text-black mb-4">
+                        <i class="fas fa-ad text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Print Design</h3>
+                    <p class="text-gray-600">Business cards, brochures, flyers, and other print materials that make an impact.</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                    <div class="text-black mb-4">
+                        <i class="fas fa-icons text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Illustration</h3>
+                    <p class="text-gray-600">Custom illustrations that bring your ideas to life with artistic flair.</p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                    <div class="text-black mb-4">
+                        <i class="fas fa-mobile-alt text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">UI/UX Design</h3>
+                    <p class="text-gray-600">User-friendly interfaces with beautiful aesthetics for websites and applications.</p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                    <div class="text-black mb-4">
+                        <i class="fas fa-photo-video text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Social Media Graphics</h3>
+                    <p class="text-gray-600">Eye-catching visuals optimized for social media platforms to boost engagement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 px-6 bg-gray-50">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Portfolio</h2>
+                <div class="w-20 h-1 bg-black mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Browse through our collection of recent projects showcasing our design expertise across various industries.</p>
+            </div>
+            
+            <!-- Portfolio Filter -->
+            <div class="flex justify-center mb-12">
+                <div class="inline-flex flex-wrap justify-center gap-2">
+                    <button class="portfolio-filter px-4 py-2 rounded-full bg-black text-white" data-filter="all">All</button>
+                    <button class="portfolio-filter px-4 py-2 rounded-full bg-white text-gray-700 hover:bg-gray-100" data-filter="logo">Logos</button>
+                    <button class="portfolio-filter px-4 py-2 rounded-full bg-white text-gray-700 hover:bg-gray-100" data-filter="branding">Branding</button>
+                    <button class="portfolio-filter px-4 py-2 rounded-full bg-white text-gray-700 hover:bg-gray-100" data-filter="print">Print</button>
+                    <button class="portfolio-filter px-4 py-2 rounded-full bg-white text-gray-700 hover:bg-gray-100" data-filter="illustration">Illustration</button>
+                </div>
+            </div>
+            
+            <!-- Portfolio Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md" data-category="logo">
+                    <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Logo Design" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Tech Startup Logo</h3>
+                        <p class="text-gray-600 mb-4">Modern and sleek logo design for a technology startup company.</p>
+                        <span class="inline-block bg-gray-200 text-black px-3 py-1 rounded-full text-sm">Logo Design</span>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md" data-category="branding">
+                    <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Brand Identity" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Coffee Shop Branding</h3>
+                        <p class="text-gray-600 mb-4">Complete brand identity for an artisanal coffee shop including logo, packaging, and merchandise.</p>
+                        <span class="inline-block bg-gray-200 text-black px-3 py-1 rounded-full text-sm">Branding</span>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md" data-category="print">
+                    <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Business Cards" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Corporate Business Cards</h3>
+                        <p class="text-gray-600 mb-4">Elegant and professional business card design for a financial consulting firm.</p>
+                        <span class="inline-block bg-gray-200 text-black px-3 py-1 rounded-full text-sm">Print</span>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md" data-category="illustration">
+                    <img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Children's Book Local Station Illustration" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Children's Book: Local Station Adventures</h3>
+                        <p class="text-gray-600 mb-4">Whimsical illustrations featuring local station scenes for a children's educational book series.</p>
+                        <span class="inline-block bg-gray-200 text-black px-3 py-1 rounded-full text-sm">Illustration</span>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md" data-category="logo">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Restaurant Logo" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Gourmet Restaurant Logo</h3>
+                        <p class="text-gray-600 mb-4">Elegant logo design for a high-end restaurant with a focus on fine dining.</p>
+                        <span class="inline-block bg-gray-200 text-black px-3 py-1 rounded-full text-sm">Logo Design</span>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md" data-category="branding">
+                    <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1288&q=80" alt="Organic Skincare Packaging" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Organic Skincare Packaging</h3>
+                        <p class="text-gray-600 mb-4">Eco-friendly packaging design for a line of organic skincare products.</p>
+                        <span class="inline-block bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full text-sm">Branding</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-block bg-black text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-800 transition duration-300">Start Your Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
+                    <img src="https://images.unsplash.com/photo-1579389083078-4e7018379f7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Designer at Work" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">About Yawer Graphic</h2>
+                    <p class="text-gray-600 mb-6">Founded with a passion for visual storytelling, Yawer Graphic is dedicated to creating designs that not only look beautiful but also effectively communicate your brand's message.</p>
+                    <p class="text-gray-600 mb-6">With years of experience in the industry, we've helped businesses of all sizes establish their visual identity through thoughtful and strategic design solutions.</p>
+                    <p class="text-gray-600 mb-8">Our approach combines creativity with market research to ensure your designs resonate with your target audience while standing out from the competition.</p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="flex items-center">
+                            <div class="bg-gray-200 p-3 rounded-full mr-4">
+                                <i class="fas fa-check text-black"></i>
+                            </div>
+                            <span class="font-medium text-gray-700">Custom Designs</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gray-200 p-3 rounded-full mr-4">
+                                <i class="fas fa-check text-black"></i>
+                            </div>
+                            <span class="font-medium text-gray-700">Fast Turnaround</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gray-200 p-3 rounded-full mr-4">
+                                <i class="fas fa-check text-black"></i>
+                            </div>
+                            <span class="font-medium text-gray-700">Unlimited Revisions</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gray-200 p-3 rounded-full mr-4">
+                                <i class="fas fa-check text-black"></i>
+                            </div>
+                            <span class="font-medium text-gray-700">Responsive Support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 px-6 bg-gray-50">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Client Testimonials</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Yawer Graphic transformed our brand identity with a stunning logo and complete visual system. Their attention to detail and creative approach exceeded our expectations."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Sarah Johnson</h4>
+                            <p class="text-gray-500 text-sm">CEO, TechSolutions</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The packaging design Yawer created for our product line helped us stand out on shelves and increased our sales by 30%. Their designs are both beautiful and strategic."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Michael Chen</h4>
+                            <p class="text-gray-500 text-sm">Founder, OrganicLife</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Working with Yawer Graphic was a pleasure from start to finish. They understood our vision immediately and delivered a logo that perfectly represents our restaurant's ethos."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Emma Rodriguez</h4>
+                            <p class="text-gray-500 text-sm">Owner, Bella Cucina</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 bg-black text-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+                <div class="w-20 h-1 bg-white mx-auto"></div>
+                <p class="mt-4 max-w-2xl mx-auto">Ready to start your project? Contact us today for a free consultation and quote.</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 rounded-lg bg-gray-900 bg-opacity-30 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent placeholder-gray-400" placeholder="John Doe" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg bg-gray-900 bg-opacity-30 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent placeholder-gray-400" placeholder="you@example.com" required>
+                        </div>
+                        <div>
+                            <label for="phone" class="block mb-2">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg bg-gray-900 bg-opacity-30 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent placeholder-gray-400" placeholder="+92 347 9263948">
+                        </div>
+                        <div>
+                            <label for="service" class="block mb-2">Service Needed</label>
+                            <select id="service" class="w-full px-4 py-3 rounded-lg bg-gray-900 bg-opacity-30 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent text-white">
+                                <option value="" disabled selected>Select a service</option>
+                                <option value="logo">Logo Design</option>
+                                <option value="branding">Brand Identity</option>
+                                <option value="print">Print Design</option>
+                                <option value="illustration">Illustration</option>
+                                <option value="uiux">UI/UX Design</option>
+                                <option value="social">Social Media Graphics</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-2">Project Details</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg bg-gray-900 bg-opacity-30 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent placeholder-gray-400" placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white bg-opacity-10 p-8 rounded-lg h-full">
+                        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-white mr-4 mt-1">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Email</h4>
+                                    <a href="mailto:yawergraphic@gmail.com" class="text-indigo-200 hover:text-white">yawergraphic@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-white mr-4 mt-1">
+                                    <i class="fas fa-phone-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Phone</h4>
+                                    <a href="tel:03479263948" class="text-indigo-200 hover:text-white">0347 9263948</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-white mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Location</h4>
+                                    <p class="text-gray-400">Based in Pakistan, serving clients worldwide</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-white mr-4 mt-1">
+                                    <i class="fas fa-clock text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Working Hours</h4>
+                                    <p class="text-gray-400">Monday - Friday: 9am - 6pm</p>
+                                    <p class="text-gray-400">Saturday: 10am - 3pm</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10">
+                            <h4 class="font-semibold mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-white bg-opacity-20 w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-white bg-opacity-20 w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="bg-white bg-opacity-20 w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300">
+                                    <i class="fab fa-behance"></i>
+                                </a>
+                                <a href="#" class="bg-white bg-opacity-20 w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300">
+                                    <i class="fab fa-dribbble"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-6">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="text-2xl font-bold text-white logo-text mb-4">YAWER GRAPHIC</div>
+                    <p class="text-gray-400">Creating designs that inspire and communicate.</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-16">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                            <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
+                            <li><a href="#portfolio" class="text-gray-400 hover:text-white transition duration-300">Portfolio</a></li>
+                            <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
+                            <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Services</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Logo Design</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Brand Identity</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Print Design</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Illustration</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">UI/UX Design</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-span-2 md:col-span-1">
+                        <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+                        <p class="text-gray-400 mb-4">Subscribe to get updates on our latest work and design tips.</p>
+                        <form class="flex">
+                            <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800 w-full">
+                            <button type="submit" class="bg-black px-4 py-2 rounded-r-lg hover:bg-gray-800 transition duration-300">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 Yawer Graphic. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-black text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:bg-gray-800 transition duration-300 hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-8 rounded-lg max-w-md w-full mx-4 text-center">
+            <div class="text-green-500 text-5xl mb-4">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Message Sent!</h3>
+            <p class="text-gray-600 mb-6">Thank you for contacting us. We'll get back to you soon.</p>
+            <button id="close-modal" class="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition duration-300">OK</button>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Portfolio Filter
+        const filterButtons = document.querySelectorAll('.portfolio-filter');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('bg-black', 'text-white');
+                    btn.classList.add('bg-white', 'text-gray-700', 'hover:bg-gray-100');
+                });
+                
+                button.classList.remove('bg-white', 'text-gray-700', 'hover:bg-gray-100');
+                button.classList.add('bg-black', 'text-white');
+                
+                const filterValue = button.getAttribute('data-filter');
+                
+                // Filter items
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('hidden');
+            } else {
+                backToTopBtn.classList.add('hidden');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Contact Form Submission
+        const contactForm = document.getElementById('contact-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModalBtn = document.getElementById('close-modal');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Here you would typically send the form data to a server
+            // For this example, we'll just show the success modal
+            
+            // Reset form
+            contactForm.reset();
+            
+            // Show success modal
+            successModal.classList.remove('hidden');
+        });
+        
+        closeModalBtn.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
